@@ -12,10 +12,10 @@ window.onload = () => {
     const board3 = document.getElementById('BOARD3');
     const mail = document.getElementById('MAIL');
     const pgpk = document.getElementById('PGPK');
-    board1.innerText = atob(snippets.BOARD1);
-    board2.innerText = atob(snippets.BOARD2);
-    board3.innerText = atob(snippets.BOARD3);
-    mail.innerText = atob(snippets.MAIL);
-    mail.href = 'mailto:' + atob(snippets.MAIL);
-    pgpk.href = 'data:application/pgp-keys;base64,' + snippets.PGPK;
+    if (board1 !== null) board1.innerText = atob(snippets.BOARD1);
+    if (board2 !== null) board2.innerText = atob(snippets.BOARD2);
+    if (board3 !== null) board3.innerText = atob(snippets.BOARD3);
+    if (mail !== null) mail.innerText = atob(snippets.MAIL);
+    if (mail !== null) mail.href = 'mailto:' + atob(snippets.MAIL);
+    if (pgpk !== null) pgpk.href = 'data:application/pgp-keys;base64,' + snippets.PGPK;
 }
